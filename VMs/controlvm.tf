@@ -1,3 +1,7 @@
+/*
+ControlVM already deployed
+
+
 data "vkcs_compute_flavor" "compute" {
     name = "Basic-1-2-20"
 }
@@ -53,3 +57,4 @@ resource "vkcs_compute_floatingip_associate" "fip" {
 output "instance_fip" {
     value = vkcs_networking_floatingip.fip.address
 }
+*/
