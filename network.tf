@@ -3,7 +3,7 @@ data "vkcs_networking_network" "extnet" {
 }
 
 resource "vkcs_networking_network" "network" {
-    name = "net"
+    name = "project-net"
 }
 
 resource "vkcs_networking_subnet" "subnetwork" {
