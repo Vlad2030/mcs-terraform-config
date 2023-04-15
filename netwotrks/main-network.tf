@@ -3,7 +3,7 @@ data "vkcs_networking_network" "extnet" {
 }
 
 resource "vkcs_networking_network" "network" {
-    name = locals.envs["NETWORK"]
+    name = locals.envs["NETWORK_NAME"]
 }
 
 resource "vkcs_networking_subnet" "subnetwork" {
