@@ -2,11 +2,10 @@ terraform {
     required_providers {
         vkcs = {
             source = "vk-cs/vkcs"
-            version = "~> 0.1.12" 
+            version = "~> 0.1.0"
         }
     }
 }
-
 provider "vkcs" {
     username = locals.envs["USERNAME"]
     password = locals.envs["PASSWORD"]
