@@ -3,13 +3,13 @@ data "vkcs_networking_network" "extnet" {
 }
 
 resource "vkcs_networking_network" "network" {
-    name = locals.envs["NETWORK_NAME"]
+    name = "mcs_network"
 }
 
 resource "vkcs_networking_subnet" "subnetwork" {
     name = "subnet_1"
     network_id = vkcs_networking_network.network.id
-    cidr = "192.168.199.0/24"
+    cidr = "10.0.0.0/24"
 }
 
 resource "vkcs_networking_router" "router" {
@@ -18,11 +18,10 @@ resource "vkcs_networking_router" "router" {
     external_network_id = data.vkcs_networking_network.extnet.id
 }
 
-resource "vkcs_networking_router_interface" "db" {
+resource "vkcs_networking_router_interface" "router_interface" {
     router_id = vkcs_networking_router.router.id
     subnet_id = vkcs_networking_subnet.subnetwork.id
 }
-
 
 resource "vkcs_networking_secgroup" "secgroup" {
     name = "security_group"
