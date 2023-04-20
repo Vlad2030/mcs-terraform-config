@@ -21,7 +21,7 @@ services:
       # @see https://phabricator.wikimedia.org/source/mediawiki/browse/master/includes/DefaultSettings.php
       MYSQL_DATABASE: mediawiki
       MYSQL_USER: wiki
-      MYSQL_PASSWORD: @tomski!!s
+      MYSQL_PASSWORD: '@tomski!!s'
       MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
     volumes:
       - db:/var/lib/mysql

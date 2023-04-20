@@ -1,2 +1,2 @@
 sudo apt-get update
-sudo apt install docker.io
+sudo apt install docker.io docker-compose
