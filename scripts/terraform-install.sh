@@ -4,4 +4,4 @@ rm -f terraform_1.1.9_linux_amd64.zip
 chmod +x terraform
 cp terraform /usr/bin/
 echo && echo
-echo "Terraform installed! Write ./terraform to use."
+echo "Terraform installed! Write terraform to use."
